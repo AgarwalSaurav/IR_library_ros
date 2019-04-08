@@ -55,25 +55,25 @@ TEST (wrapTo2PI, negativeInput) {
 }
 
 TEST (wrapToPI, positiveInput) {
-	EXPECT_TRUE(equalQ(wrapToPI(0), 0, 0));
-	EXPECT_TRUE(equalQ(wrapToPI(M_PI), -M_PI) || equalQ(wrapToPI(M_PI), M_PI));
-	EXPECT_TRUE(equalQ(wrapToPI(2 * M_PI), 0.0));
-	EXPECT_TRUE(equalQ(wrapToPI(3 * M_PI), -M_PI) || equalQ(wrapToPI(3 * M_PI), M_PI));
-	EXPECT_TRUE(equalQ(wrapToPI(4 * M_PI), 0.0));
-	EXPECT_TRUE(equalQ(wrapToPI(9 * M_PI), -M_PI) || equalQ(wrapToPI(9 * M_PI), M_PI));
-	EXPECT_TRUE(equalQ(wrapToPI(M_PI/3), M_PI/3));
-	EXPECT_TRUE(equalQ(wrapToPI(13 * M_PI/3.), M_PI/3.));
+	EXPECT_TRUE(equalQ(wrapToPi(0), 0, 0));
+	EXPECT_TRUE(equalQ(wrapToPi(M_PI), -M_PI) || equalQ(wrapToPI(M_PI), M_PI));
+	EXPECT_TRUE(equalQ(wrapToPi(2 * M_PI), 0.0));
+	EXPECT_TRUE(equalQ(wrapToPi(3 * M_PI), -M_PI) || equalQ(wrapToPI(3 * M_PI), M_PI));
+	EXPECT_TRUE(equalQ(wrapToPi(4 * M_PI), 0.0));
+	EXPECT_TRUE(equalQ(wrapToPi(9 * M_PI), -M_PI) || equalQ(wrapToPI(9 * M_PI), M_PI));
+	EXPECT_TRUE(equalQ(wrapToPi(M_PI/3), M_PI/3));
+	EXPECT_TRUE(equalQ(wrapToPi(13 * M_PI/3.), M_PI/3.));
 }
 
 TEST (wrapToPI, negativeInput) {
-	EXPECT_TRUE(equalQ(wrapToPI(-0), 0, 0));
-	EXPECT_TRUE(equalQ(wrapToPI(-M_PI), -M_PI) || equalQ(wrapToPI(-M_PI), M_PI));
-	EXPECT_TRUE(equalQ(wrapToPI(-2 * M_PI), 0.0));
-	EXPECT_TRUE(equalQ(wrapToPI(-3 * M_PI), -M_PI) || equalQ(wrapToPI(-3 * M_PI), M_PI));
-	EXPECT_TRUE(equalQ(wrapToPI(-4 * M_PI), 0.0));
-	EXPECT_TRUE(equalQ(wrapToPI(-9 * M_PI), -M_PI) || equalQ(wrapToPI(-9 * M_PI), M_PI));
-	EXPECT_TRUE(equalQ(wrapToPI(-M_PI/3), -M_PI/3));
-	EXPECT_TRUE(equalQ(wrapToPI(-13 * M_PI/3.), -M_PI/3.));
+	EXPECT_TRUE(equalQ(wrapToPi(-0), 0, 0));
+	EXPECT_TRUE(equalQ(wrapToPi(-M_PI), -M_PI) || equalQ(wrapToPI(-M_PI), M_PI));
+	EXPECT_TRUE(equalQ(wrapToPi(-2 * M_PI), 0.0));
+	EXPECT_TRUE(equalQ(wrapToPi(-3 * M_PI), -M_PI) || equalQ(wrapToPI(-3 * M_PI), M_PI));
+	EXPECT_TRUE(equalQ(wrapToPi(-4 * M_PI), 0.0));
+	EXPECT_TRUE(equalQ(wrapToPi(-9 * M_PI), -M_PI) || equalQ(wrapToPI(-9 * M_PI), M_PI));
+	EXPECT_TRUE(equalQ(wrapToPi(-M_PI/3), -M_PI/3));
+	EXPECT_TRUE(equalQ(wrapToPi(-13 * M_PI/3.), -M_PI/3.));
 }
 
 TEST (isSO3, all) {
