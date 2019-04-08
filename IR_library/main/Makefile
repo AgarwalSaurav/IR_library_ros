@@ -1,7 +1,7 @@
 CC=g++
 IDIR=../include/
 IDIRS=-I../include/
-
+GTESTDIR=-L../gtest/
 LDIR=-L../lib/
 CFLAGS=-std=c++14 -Wall -O2 $(IDIRS) $(LDIR) -fopenmp
 ODIR=../obj/
@@ -22,6 +22,9 @@ $(EXEC_PATH)mod2R: $(SRCDIR)mod2R.cpp $(DEPS)
 
 $(EXEC_PATH)checkRigidBodyMotion: $(SRCDIR)checkRigidBodyMotion.cpp $(DEPS) | $(EXEC_PATH)
 	$(CC) $(CFLAGS) $< $(LIBS) -o $@ 
+
+gradeAll: $(SRCDIR)gradeAll.cpp $(DEPS) | $(EXEC_PATH)
+	$(CC) $(CFLAGS) $(GTESTDIR) $< $(LIBS) -lgtest -lpthread -o $(EXEC_PATH)$@ 
 
 $(EXEC_PATH):
 	mkdir -p $(EXEC_PATH)

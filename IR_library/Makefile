@@ -32,6 +32,9 @@ $(ODIR)%.o: $(SRCDIR)%.cpp $(DEPS) | $(ODIR) $(LIB_PATH)
 
 $(LIB_PATH)libIRLibrary.a: $(OBJ_ALL)
 	ar rcs $@ $^
+
+gradeAll: $(MAINDIR)gradeAll.cpp $(DEPS) | $(EXEC_PATH)
+	cd main && $(MAKE) gradeAll
 	
 .PHONY: clean
 
