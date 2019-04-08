@@ -5,7 +5,7 @@ LDIR=-Llib/
 CFLAGS=-std=c++11 -Wall -O2 $(IDIRS) $(LDIR) -fopenmp -fPIC
 ODIR=obj/
 SRCDIR=src/
-
+MAINDIR=main/
 LIBS=
 EXEC_PATH=bin/
 LIB_PATH=lib/
