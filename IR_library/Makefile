@@ -2,7 +2,7 @@ CXX=g++
 IDIR=include/
 IDIRS=-Iinclude/
 LDIR=-Llib/ 
-CFLAGS=-std=c++11 -Wall -O2 $(IDIRS) $(LDIR) -fopenmp -fPIC
+CFLAGS=-std=c++14 -Wall -O2 $(IDIRS) $(LDIR) -fopenmp -fPIC
 ODIR=obj/
 SRCDIR=src/
 MAINDIR=main/
@@ -10,7 +10,7 @@ LIBS=
 EXEC_PATH=bin/
 LIB_PATH=lib/
 
-_DEPS=Planar2R.hpp Planar2Rmod.hpp Planar3R.hpp Spatial3R.hpp RigidBodyMotion.hpp TypeDefs.hpp ForwardKinematics.hpp
+_DEPS=Planar2R.hpp Planar2Rmod.hpp Planar3R.hpp Spatial3R.hpp RigidBodyMotion.hpp TypeDefs.hpp ForwardKinematics.hpp MathUtils.hpp
 DEPS=$(patsubst %,$(IDIR)%,$(_DEPS))
 
 _OBJ_ALL=Planar2R.o Planar2Rmod.o Planar3R.o Spatial3R.o
