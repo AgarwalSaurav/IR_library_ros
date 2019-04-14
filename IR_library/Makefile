@@ -11,10 +11,10 @@ LIBS=
 EXEC_PATH=bin/
 LIB_PATH=lib/
 
-_DEPS=RigidBodyMotion.hpp TypeDefs.hpp ForwardKinematics.hpp MathUtils.hpp
+_DEPS=RigidBodyMotion.hpp TypeDefs.hpp ForwardKinematics.hpp MathUtils.hpp Jacobian.hpp
 DEPS=$(patsubst %,$(IDIR)%,$(_DEPS))
 
-_OBJ_ALL=Planar2R.o Planar2Rmod.o Planar3R.o Spatial3R.o MathUtils.o RigidBodyMotion.o ForwardKinematics.o
+_OBJ_ALL=Planar2R.o Planar2Rmod.o Planar3R.o Spatial3R.o MathUtils.o RigidBodyMotion.o ForwardKinematics.o Jacobian.o InverseKinematics.o
 OBJ_ALL=$(patsubst %,$(ODIR)%,$(_OBJ_ALL))
 
 all: $(LIB_PATH)libIRLibrary.a  
