@@ -40,6 +40,7 @@ IR_library/lib/*
 # Catkin build and devel
 IR_catkin_ws/devel
 IR_catkin_ws/build
+IR_catkin_ws/src/CMakeLists.txt
 
 IR_library/gtest/*
 !IR_library/gtest/setup.sh
