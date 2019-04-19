@@ -19,7 +19,7 @@ namespace IRlibrary {
 			Tsb = FKinBody(M, Blist, thetaVec);
 			Vs = Adjoint(Tsb) * se3ToVec(MatrixLog6(TransInv(Tsb) * T));
 			if( Vs.head(3).norm() < eps_omega and Vs.tail(3).norm() < eps_v) {
-				return true;
+				return 0;
 			}
 			Eigen::MatrixXd Jb = JacobianBody(Blist, thetaVec);
 			auto JbCOD = Jb.completeOrthogonalDecomposition();
@@ -30,7 +30,7 @@ namespace IRlibrary {
 			Eigen::MatrixXd pinv = JbCOD.pseudoInverse();
 			thetaList += pinv * Vs;
 		}
-		return 0;
+		return 1;
 	}
 
 /** This is similar to IKinBody, except that the joint screws S_i are expressed in the
