@@ -45,9 +45,11 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-INCLUDE_DIRECTORIES(../../../IR_library/include)
-LINK_DIRECTORIES(../../../IR_library/lib)
 
+INCLUDE_DIRECTORIES($ENV{IR_LIBRARY_PATH}/IR_library/include)
+LINK_DIRECTORIES($ENV{IR_LIBRARY_PATH}/IR_library/lib)
+
+INCLUDE_DIRECTORIES($ENV{IR_LIBRARY_PATH})
 
 add_executable(spatial3r_kinematics_forwardKinematics src/forwardKinematics.cpp)
 target_link_libraries(spatial3r_kinematics_forwardKinematics ${catkin_LIBRARIES} IRLibrary)

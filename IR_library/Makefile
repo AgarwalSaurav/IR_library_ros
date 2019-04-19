@@ -1,6 +1,6 @@
 CXX=g++
 IDIR=include/
-IDIRS=-Iinclude/
+IDIRS=-Iinclude/ -I${IR_LIBRARY_PATH}
 LDIR=-Llib/
 CFLAGS=-std=c++14 -Wall -O2 $(IDIRS) $(LDIR) -fopenmp -fPIC
 ODIR=obj/

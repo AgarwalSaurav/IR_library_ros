@@ -1,6 +1,6 @@
 CC=g++
 IDIR=../include/
-IDIRS=-I../include/
+IDIRS=-I../include/ -I${IR_LIBRARY_PATH}
 
 LDIR=-L../lib/
 GTESTDIR=-L../gtest/
