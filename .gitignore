@@ -43,3 +43,5 @@ IR_catkin_ws/build
 
 IR_library/gtest/*
 !IR_library/gtest/setup.sh
+
+eigen3/
